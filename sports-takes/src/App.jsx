@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { prompts } from "./data/prompts";
-import { Analytics } from "@vercel/analytics/next";
 import "./App.css";
 
 const INITIAL_PROMPT = "Draw a topic";
