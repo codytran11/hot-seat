@@ -131,7 +131,7 @@ function App() {
     return (
       <main className="timer-screen">
         <header className="timer-header">
-          <span>HOT SEAT</span>
+          <span>SHOT CLOCK</span>
 
           <span>
             {categoryIcons[category]} {category.toUpperCase()}
@@ -174,7 +174,7 @@ function App() {
       <header className="site-header">
         <div>
           <h1>
-            Hot <span>Seat</span>
+            Shot <span>Clock</span>
           </h1>
 
           <p className="tagline">

@@ -33,6 +33,7 @@ export const prompts = {
     "Generational Talent",
     "End of an Era",
     "Betrayal",
+    "Poetry in Motion",
   ],
   NBA: [
     "Lebron vs Jordan",
