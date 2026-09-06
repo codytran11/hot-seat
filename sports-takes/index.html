@@ -4,17 +4,77 @@
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/hotseatfavicon.png" />
+
+    <title>Free NBA & Sports Debate Game | ShotClock</title>
+
     <meta
       name="description"
-      content="Draw a sports topic and defend your take before the 60-second ShotClock expires."
+      content="Play ShotClock, a free 60-second sports debate game. Draw random NBA, NFL, MLB, NHL, soccer, and college sports topics and defend your take."
     />
 
-    <title>ShotClock — The 60-Second Sports Debate Game</title>
+    <meta name="author" content="Cody Tran" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="canonical" href="https://shotclock.website/" />
+    <link rel="icon" type="image/png" href="/hotseatfavicon.png" />
+
+    <!-- Social media preview -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="ShotClock — The 60-Second Sports Debate Game"
+    />
+    <meta
+      property="og:description"
+      content="Draw a sports topic, defend your take, and beat the 60-second ShotClock."
+    />
+    <meta property="og:url" content="https://shotclock.website/" />
+    <meta
+      property="og:image"
+      content="https://shotclock.website/shotclock-preview.png"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="ShotClock — The 60-Second Sports Debate Game"
+    />
+    <meta
+      name="twitter:description"
+      content="Draw a sports topic, defend your take, and beat the 60-second ShotClock."
+    />
+    <meta
+      name="twitter:image"
+      content="https://shotclock.website/shotclock-preview.png"
+    />
+
+    <!-- Information about the game for search engines -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "ShotClock",
+        "url": "https://shotclock.website/",
+        "description": "A free 60-second NBA and sports debate web game with random discussion topics.",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "Any",
+        "genre": ["Sports", "Debate", "Party Game"],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "creator": {
+          "@type": "Person",
+          "name": "Cody Tran"
+        }
+      }
+    </script>
   </head>
 
   <body>
     <div id="root"></div>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

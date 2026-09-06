@@ -55,7 +55,6 @@ function App() {
     );
 
     const listToUse = filteredPrompts.length > 0 ? filteredPrompts : promptList;
-
     const randomIndex = Math.floor(Math.random() * listToUse.length);
 
     return listToUse[randomIndex];
@@ -131,7 +130,7 @@ function App() {
     return (
       <main className="timer-screen">
         <header className="timer-header">
-          <span>SHOT CLOCK</span>
+          <span>SHOTCLOCK</span>
 
           <span>
             {categoryIcons[category]} {category.toUpperCase()}
@@ -145,6 +144,8 @@ function App() {
             className={
               timeLeft <= 10 ? "shot-clock shot-clock-warning" : "shot-clock"
             }
+            aria-live="polite"
+            aria-label={`${timeLeft} seconds remaining`}
           >
             {timeLeft}
           </div>
@@ -190,8 +191,8 @@ function App() {
         </p>
       </header>
 
-      <section className="game-area">
-        <nav className="category-list">
+      <section className="game-area" aria-label="ShotClock sports debate game">
+        <nav className="category-list" aria-label="Choose a sports category">
           {Object.keys(prompts).map((categoryName) => (
             <button
               key={categoryName}
@@ -202,6 +203,7 @@ function App() {
               }
               onClick={() => changeCategory(categoryName)}
               disabled={isSpinning}
+              aria-pressed={category === categoryName}
             >
               <span className="category-icon" aria-hidden="true">
                 {categoryIcons[categoryName]}
@@ -217,7 +219,7 @@ function App() {
           embodies it.
         </p>
 
-        <div className="prompt-window">
+        <div className="prompt-window" aria-live="polite">
           <h2 className={isSpinning ? "prompt-text spinning" : "prompt-text"}>
             {currentPrompt}
           </h2>
@@ -240,6 +242,11 @@ function App() {
             Start Clock
           </button>
         </div>
+
+        <p className="seo-description">
+          ShotClock is a free 60-second sports debate game featuring random NBA,
+          NFL, MLB, NHL, soccer, and college sports topics.
+        </p>
       </section>
     </main>
   );
